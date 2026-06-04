@@ -1,0 +1,73 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg
+*.egg-info/
+dist/
+build/
+eggs/
+parts/
+var/
+sdist/
+wheels/
+pip-wheel-metadata/
+.installed.cfg
+lib/
+lib64/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+*.log
+
+# Audio files (uploads/outputs — don't commit generated audio)
+uploads/
+outputs/
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.m4a
+*.aac
+
+# Model weights (large binary files)
+weights/
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+
+# Jupyter notebooks checkpoints
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+*.dockerignore
+
+# Secrets / env
+.env*
+!.env.example
+secrets/
