@@ -39,6 +39,9 @@ python pipeline.py --input my_clip.wav --output output.wav --duration 300
 # API server
 PORT=8000 python -m src.api.main
 ```
+### Screenshot of getting output
+
+![alt text](image.png)
 
 The API defaults to port `8000`. Set `PORT` to use another port.
 

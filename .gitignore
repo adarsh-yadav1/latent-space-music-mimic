@@ -32,7 +32,7 @@ htmlcov/
 *.log
 
 # Audio files (uploads/outputs — don't commit generated audio)
-uploads/
+
 outputs/
 *.wav
 *.mp3
