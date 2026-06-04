@@ -34,7 +34,7 @@ htmlcov/
 # Audio files (uploads/outputs — don't commit generated audio)
 
 outputs/
-*.wav
+
 *.mp3
 *.flac
 *.ogg

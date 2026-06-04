@@ -41,7 +41,7 @@ PORT=8000 python -m src.api.main
 ```
 ### Screenshot of getting output
 
-![alt text](image.png)
+![alt text](images/output.png)
 
 The API defaults to port `8000`. Set `PORT` to use another port.
 
