@@ -29,14 +29,18 @@ Output 5-min WAV
 ## Quick Start
 
 ```bash
-pip install -r requirements.txt
+python3.11 -m venv .venv
+. .venv/bin/activate
+python -m pip install -r requirements.txt
 
 # CLI
 python pipeline.py --input my_clip.wav --output output.wav --duration 300
 
 # API server
-uvicorn src.api.main:app --reload --port 8000
+PORT=8000 python -m src.api.main
 ```
+
+The API defaults to port `8000`. Set `PORT` to use another port.
 
 ### API Usage
 
@@ -60,15 +64,21 @@ curl http://localhost:8000/result/abc123 -o output.wav
 ```bash
 docker build -t music-mimic .
 docker run -p 8000:8000 music-mimic
+
+# Custom host port
+docker run -e PORT=8080 -p 8080:8080 music-mimic
 ```
 
 ## Tests
 
 ```bash
-pytest tests/ -v
+python -m pytest tests/ -v
 ```
 
 All 11 tests pass covering: ingestion, separation, feature extraction, generation per stem type, structure, crossfade, mixing, and full end-to-end pipeline.
+
+### Screenshot
+![alt text](images/testpassed.png)
 
 ## Architecture Notes
 

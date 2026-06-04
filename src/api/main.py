@@ -182,3 +182,22 @@ def health():
 @app.get("/")
 def root():
     return {"message": "Latent Space Music Mimic API", "docs": "/docs"}
+
+
+def _server_port() -> int:
+    """Return the configured HTTP port for direct module execution."""
+    port = os.getenv("PORT", "8000")
+    try:
+        return int(port)
+    except ValueError as exc:
+        raise RuntimeError(f"PORT must be an integer, got {port!r}") from exc
+
+
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(
+        app,
+        host=os.getenv("HOST", "0.0.0.0"),
+        port=_server_port(),
+    )
